@@ -1,5 +1,6 @@
 :root {
     --brandcolor: #95D5B2;
+    --backgrounds: #6C3B70;
 }
 
 * {
@@ -41,6 +42,8 @@ body {
     list-style: none;
     display: flex;
     gap: 25px;
+        white-space: nowrap;
+
 }
 
 .navbarMenu .listOfproducts li {
@@ -51,6 +54,7 @@ body {
 .navbarMenu .listOfproducts li a {
     text-decoration: none;
     color: #000;
+    font-size: 14px;
 }
 
 .navbarMenu .listOfproducts li img {
@@ -113,6 +117,176 @@ body {
     font-family: Yekan;
 
 }
+main{
+    width: 100%;
+}
+
+.heroHolder{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.secondImg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+     width: 98%;
+    display: block;
+    border-radius: 10px;
+        animation: second 9s infinite;
+
+}
+
+.heroHolder .firstImg{
+    width: 98%;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+        animation: first 9s infinite;
+
+}
+
+@keyframes first{
+    0%,33% {
+        opacity: 1;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes second{
+    0%,33% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.social{
+    width: 98%;
+    height: auto;
+    background-color: var(--backgrounds);
+    box-shadow: 1px 1px 5px #000;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.social p , .social p a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+.social i{
+    vertical-align: middle;
+}
+
+.headerImg{
+    width: 98%;
+    border-radius: 0 0 15px 15px;
+    display: block;
+    margin: 30px auto;
+}
+
+.bestOfferHolder{
+    width: 98%;
+    height: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+
+}
+
+.offers{
+    width: max-content;
+    height: 350px;
+    background-color: var(--backgrounds);
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cards{
+    width: 14%;
+    height: 300px;
+    background-color: #fff;
+    animation: move 10s linear
+     infinite;
+}
+
+.cards .oldPrice{
+    text-decoration: line-through; 
+}
+
+.badgeandprice{
+    max-width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.newPrice{
+    text-align: center;
+    font-weight: 900;
+}
+
+.badge{
+    width: 25%;
+    background-color: red;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.cards p{ 
+    width: 85%;
+    font-size: 15px;
+    margin: 0 auto;
+}
+
+.dogImg{
+     width: 10%;
+    height: 250px;
+    background-color: var(--backgrounds);
+}
+
+.dogImg img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.sixthOrder img{
+    width: 100%;
+    height: 150px;
+}
+
+@keyframes move {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(700px);
+    }
+
+}
+
 
 @media only screen and (max-width:767px) {
     .brandName {
@@ -147,19 +321,23 @@ body {
     .navbarMenu {
         width: 100%;
         overflow-x: auto;
+                scrollbar-width: none;
+
     }
 
     .navbarMenu .listOfproducts {
         width: max-content;
         max-width: none;
         padding-right: 0;
-        scrollbar-width: none;
         gap: 10px;
-        margin: 0 auto;
+    }.navbarMenu::-webkit-scrollbar{
+         display: none;
     }
 
     .navbarMenu .listOfproducts li img {
-        display: none;
+        width: 25px;
+        height: 25px;
+       
     }
 
     .navbar {
