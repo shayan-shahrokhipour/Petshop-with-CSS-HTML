@@ -1,0 +1,185 @@
+:root {
+    --brandcolor: #95D5B2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Yekan;
+    src: url(../assets/B_Yekan/Yekan.ttf);
+}
+
+body {
+    direction: rtl;
+    font-family: Yekan;
+
+}
+
+.navbar {
+    position: relative;
+
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbarMenu {
+    width: 100%;
+    border-bottom: 1px solid rgb(212, 212, 212);
+
+}
+
+.navbarMenu .listOfproducts {
+    max-width: 55%;
+    padding-right: 50px;
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbarMenu .listOfproducts li {
+    display: flex;
+    gap: 10px;
+}
+
+.navbarMenu .listOfproducts li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.navbarMenu .listOfproducts li img {
+    width: 40%;
+    height: 70%;
+    vertical-align: middle;
+}
+
+.brandName {
+    width: 15%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.inputHolder .fa-magnifying-glass {
+    position: absolute;
+    top: 40px;
+    right: 16%;
+    color: rgb(161, 161, 161);
+}
+
+.brandName p {
+    font-size: 30px;
+    color: var(--brandcolor);
+}
+
+.inputHolder {
+    width: 50%;
+}
+
+.inputHolder input {
+    width: 85%;
+    height: 35px;
+    border-radius: 5px;
+    padding-right: 35px;
+    box-shadow: 1px 1px 5px #000;
+    border: none;
+    font-family: Yekan;
+
+}
+
+.buttonsAndbasket {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-left: 35px;
+}
+
+
+.buttonsAndbasket button {
+    border: 1px solid rgb(200, 200, 200);
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-family: Yekan;
+
+}
+
+@media only screen and (max-width:767px) {
+    .brandName {
+        width: 50%;
+        order: 1;
+    }
+
+    .buttonsAndbasket {
+        width: 50%;
+        height: auto;
+        order: 2;
+    }
+
+    .inputHolder {
+        width: 100%;
+
+        order: 3;
+
+    }
+
+    .inputHolder input {
+        width: 90%;
+        display: block;
+        margin: 50px auto;
+    }
+
+    .inputHolder .fa-magnifying-glass {
+        top: 62%;
+        right: 7%;
+    }
+
+    .navbarMenu {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .navbarMenu .listOfproducts {
+        width: max-content;
+        max-width: none;
+        padding-right: 0;
+        scrollbar-width: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .navbarMenu .listOfproducts li img {
+        display: none;
+    }
+
+    .navbar {
+        height: auto;
+        min-height: 100px;
+    }
+
+
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .navbarMenu .listOfproducts {
+        max-width: 75%;
+    }
+
+    .navbarMenu .listOfproducts li img {
+        width: 35%;
+    }
+
+    .navbarMenu .listOfproducts {
+        gap: 25px;
+    }
+}
