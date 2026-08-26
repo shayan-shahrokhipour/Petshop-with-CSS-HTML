@@ -1,7 +1,8 @@
 :root {
   --brandcolor: #95d5b2;
   --backgrounds: #6c3b70;
-  --skyBlue: #7DD3FC;
+  --skyBlue: #7dd3fc;
+  --borders: rgb(211, 209, 209);
 }
 
 * {
@@ -32,7 +33,7 @@ body {
 
 .navbarMenu {
   width: 100%;
-  border-bottom: 1px solid rgb(212, 212, 212);
+  border-bottom: 1px solid var(--borders);
 }
 
 .navbarMenu .listOfproducts li a {
@@ -95,7 +96,7 @@ body {
   position: absolute;
   top: 40px;
   right: 16%;
-  color: rgb(161, 161, 161);
+  color: var(--borders);
 }
 
 .brandName p {
@@ -128,7 +129,7 @@ body {
 }
 
 .buttonsAndbasket button {
-  border: 1px solid rgb(200, 200, 200);
+  border: 1px solid var(--borders);
   background-color: #fff;
   border-radius: 5px;
   padding: 10px;
@@ -195,6 +196,36 @@ main {
   }
 }
 
+.shopBycategory {
+  width: 99%;
+}
+
+.firstCategory {
+  width: 15%;
+  height: 100%;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.12),
+    inset 0 0 8px rgba(0, 0, 0, 0.08);
+
+  text-align: center;
+}
+
+.firstCategory img {
+  width: 100%;
+}
+
+.firstCategory p a {
+  color: #000;
+  text-decoration: none;
+}
+
+.categoryHolder {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .social {
   width: 98%;
   height: auto;
@@ -225,7 +256,7 @@ main {
   width: 98%;
   height: 100%;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .offers {
@@ -358,6 +389,8 @@ main {
 
 .categoryPics img {
   width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .afterImportantCategory {
@@ -376,30 +409,76 @@ main {
   height: auto;
 }
 
-.newProduct{
+.newProduct {
   width: 100%;
 }
 
-.newHolder{
-    width: 99%;
-    height: 500px;
-    border: 1px solid rgb(211, 209, 209);
-    border-radius: 15px;
+.newHolder {
+  width: 99%;
+  height: 500px;
+  border: 1px solid var(--borders);
+  border-radius: 15px;
 }
 
-.descriptions{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+.descriptions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .descriptions h3 {
-    border-bottom: 2px solid #000;
+  border-bottom: 2px solid var(--borders);
 }
- .descriptions a{
-    text-decoration: none;
-    color: #7DD3FC;
- }
+.descriptions a {
+  text-decoration: none;
+  color: var(--skyBlue);
+}
+
+.newproductHolder {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+   flex-wrap: wrap;
+
+}
+
+.newProductCard {
+  width: 15%;
+  height: 300px;
+  border-left: 1px solid var(--borders);
+  color: #000;
+  text-decoration: none;
+}
+
+.newProductCard img {
+  width: 100%;
+}
+
+.newProductCard .newProductParagraph span {
+  font-size: 15px;
+}
+
+.newProductCard .newProductParagraph {
+  font-size: 12px;
+}
+
+.newProductCard .oldPrice {
+  text-decoration: line-through;
+}
+
+.newProductbadgeandprice{
+  max-width: 80%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.newPrice{
+  text-align: center;
+}
+
+
 
 @media only screen and (max-width: 567px) {
   .categoryPics {
@@ -419,10 +498,22 @@ main {
     width: 45%;
     height: 100%;
     animation: none;
-  }.descriptions{
-    padding: 0;
-  }.newHolder{
-     border: none;
+  }
+  
+  .newHolder {
+    border: none;
+  }
+  .firstCategory {
+    width: 45%;
+  }.newProductCard{
+    width: 45%;
+    height: auto;
+    border-left: none;
+   
+  }.newProductbadgeandprice{
+    max-width: 90%;
+    flex-direction: column;
+    align-items: center; 
   }
 }
 
@@ -433,6 +524,15 @@ main {
   }
   .categoryPics img {
     width: 90%;
+  }
+  .firstCategory {
+    width: 25%;
+  }.newProductCard{
+    width: 30%;
+    height: auto;
+    gap: 10px;
+    
+   
   }
 }
 /*Phone and Tablet*/
@@ -500,8 +600,9 @@ main {
   }
   .afterImg img {
     width: 100%;
-  }.newHolder{
-     border: none;
+  }
+  .newHolder {
+    border: none;
   }
 }
 /*Tablets*/
@@ -522,7 +623,18 @@ main {
   }
   .categoryPics img {
     width: 80%;
-  }.newHolder{
-     border: none;
+  }
+  .newHolder {
+    border: none;
+  }
+  .firstCategory {
+    width: 20%;
+  }.newProductCard{
+    width: 25%;
+    height: auto;
+     box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.12),
+    inset 0 0 8px rgba(0, 0, 0, 0.08);
+    gap: 10px;
   }
 }
