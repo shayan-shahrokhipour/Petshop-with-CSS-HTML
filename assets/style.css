@@ -3,12 +3,14 @@
   --backgrounds: #6c3b70;
   --skyBlue: #7dd3fc;
   --borders: rgb(211, 209, 209);
+  --trophies: #ffd700;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
 }
 
 @font-face {
@@ -19,6 +21,8 @@
 body {
   direction: rtl;
   font-family: Yekan;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .navbar {
@@ -198,6 +202,7 @@ main {
 
 .shopBycategory {
   width: 99%;
+  padding: 10px;
 }
 
 .firstCategory {
@@ -254,9 +259,14 @@ main {
 
 .bestOfferHolder {
   width: 98%;
-  height: 100%;
+  height: 370px;
   overflow: hidden;
-  margin: 10px auto;
+  margin:65px auto;
+}
+
+.bestSellerbtn{
+  width: 90%;
+  margin: 0 auto;
 }
 
 .offers {
@@ -418,6 +428,7 @@ main {
   height: 500px;
   border: 1px solid var(--borders);
   border-radius: 15px;
+  margin: 0 auto;
 }
 
 .descriptions {
@@ -439,8 +450,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: space-around;
-   flex-wrap: wrap;
-
+  flex-wrap: wrap;
 }
 
 .newProductCard {
@@ -467,18 +477,152 @@ main {
   text-decoration: line-through;
 }
 
-.newProductbadgeandprice{
+.newProductbadgeandprice {
   max-width: 80%;
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
 }
 
-.newPrice{
+.newPrice {
   text-align: center;
 }
 
+.bestSellers {
+  width: 100%;
+  height: auto;
+}
 
+.bestSellers h3 , .shopBycategory h3{
+  padding: 15px;
+}
+
+.bestSellers i {
+  color: var(--trophies);
+}
+
+.bestSellersHolder{
+  width: 99%;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.puzzleToy{
+  width: 15%;
+  height: auto;
+ border: 1px solid var(--borders);
+ border-radius: 5px;
+ text-align: center;
+}
+
+
+
+.puzzleToy img{
+  width: 90%;
+  height: 180px;
+  margin: 0 auto;
+  display: block;
+}
+
+.priceandstars{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  
+}
+
+.priceandstars p{
+  padding-left: 10px;
+}
+
+.bestSellerbtn{
+  margin-bottom: 10px;
+  border: none;
+  background-color: var(--skyBlue);
+  height: 25px;
+  color: #fff;
+    font-family: Yekan;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.starHolder{
+  padding: 10px;
+}
+
+.toyCollection{
+  width: 99%;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.toyCollection .first{
+  width: 40%;
+  height: 300px;
+  display: block;
+}
+
+.first img ,.second img , .third img,.fourth img{
+  width: 100%;
+  height: 100%;
+    border-radius: 5px;
+
+}
+.toyCollection .second{
+  width: 15%;
+  height: 300px;
+  border-radius: 5px;
+
+}
+
+
+
+.toyCollection .third{
+  width: 20%;
+  border-radius: 5px;
+}
+
+.toyCollection .fourth{
+  width: 20%;
+  border-radius: 5px;
+}
+
+.brands{
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.brandHolder{
+  width: 99%;
+  height: 300px;
+  border: 1px solid var(--borders);
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.brandImgHolder{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.brandImgHolder img{
+  width: 10%;
+  height: 40%;
+}
+
+.brandHolder h3{
+  padding: 20px;
+}
 
 @media only screen and (max-width: 567px) {
   .categoryPics {
@@ -499,21 +643,68 @@ main {
     height: 100%;
     animation: none;
   }
-  
+
   .newHolder {
     border: none;
+    height: auto;
+    
+     border-bottom: 1px solid var(--borders);
   }
   .firstCategory {
     width: 45%;
-  }.newProductCard{
+  }
+  .newProductCard {
     width: 45%;
     height: auto;
     border-left: none;
-   
-  }.newProductbadgeandprice{
+  }
+  .newProductbadgeandprice {
     max-width: 90%;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
+  }.puzzleToy{
+    width: 45%;
+  }.bestOfferHolder{
+    width: 90%;
+    height: auto;
+    overflow: none;
+  }.cards{
+    height: auto;
+    width: 90%;
+    animation: none;
+    margin: 0 auto;
+  }.offers{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    
+  }.bestSellers{
+    height: auto;
+  }.toyCollection .first,.toyCollection .second ,.toyCollection .third,.toyCollection .fourth{
+    width: 90%;
+    height: auto;
+        margin: 0 auto;
+
+  }.toyCollection{
+    height: auto;
+    flex-direction: column;
+  }.brandHolder{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    border: none;
+    
+ 
+  }.brandImgHolder{
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+     gap: 50px;
+     margin: 0 auto;  
+  }.brandImgHolder img{
+     width: 45%;
+     display: block;
+     margin: 0 auto;
   }
 }
 
@@ -527,12 +718,23 @@ main {
   }
   .firstCategory {
     width: 25%;
-  }.newProductCard{
+  }
+  .newProductCard {
     width: 30%;
     height: auto;
     gap: 10px;
-    
-   
+  }.puzzleToy{
+    width: 25%;
+  }.toyCollection .first,.toyCollection .second ,.toyCollection .third,.toyCollection .fourth{
+    width: 45%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }.toyCollection{
+    flex-wrap: wrap;
+    height: auto;
+    gap: 10px;
+  }.brandHolder{
+    border: none;
   }
 }
 /*Phone and Tablet*/
@@ -603,6 +805,7 @@ main {
   }
   .newHolder {
     border: none;
+    height: auto;
   }
 }
 /*Tablets*/
@@ -626,15 +829,32 @@ main {
   }
   .newHolder {
     border: none;
+    height: auto;
+
+   
   }
   .firstCategory {
     width: 20%;
-  }.newProductCard{
+  }
+  .newProductCard {
     width: 25%;
     height: auto;
-     box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.12),
-    inset 0 0 8px rgba(0, 0, 0, 0.08);
+    box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.12),
+      inset 0 0 8px rgba(0, 0, 0, 0.08);
     gap: 10px;
+  }.puzzleToy{
+    width: 20%;
+  }.newproductHolder{
+    gap: 10px;
+  }.toyCollection .first,.toyCollection .second ,.toyCollection .third,.toyCollection .fourth{
+    width: 45%;
+    flex-wrap: wrap;
+  }.toyCollection{
+    flex-wrap: wrap;
+    height: auto;
+    gap: 10px;
+  }.brandHolder{
+    border: none;
   }
 }
