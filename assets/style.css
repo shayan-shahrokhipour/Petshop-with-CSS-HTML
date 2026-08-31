@@ -38,7 +38,116 @@ body {
 .navbarMenu {
   width: 100%;
   border-bottom: 1px solid var(--borders);
+  position: relative;
 }
+
+.megaMenu{
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  z-index: 200;
+  margin: 0 auto;
+  border-radius: 0 0 5px 5px;
+}
+
+#linkTofirst{
+      display: none;
+
+
+}
+ 
+#firstLink:hover #linkTofirst{
+   display: flex;
+   justify-content: space-around;
+}
+
+#linkTosecond{
+      display: none;
+
+
+}
+ 
+#secondLink:hover #linkTosecond{
+   display: flex;
+   justify-content: space-around;
+}
+
+#linkTothird{
+  display: none;
+}
+
+#thirdLink:hover #linkTothird{
+  display: flex;
+     justify-content: space-around;
+
+}
+
+#linkTofourth{
+  display: none;
+}
+
+#fourthLink:hover #linkTofourth{
+  display: flex;
+     justify-content: space-around;
+
+}
+
+#linkTofifth{
+      display: none;
+
+
+}
+ 
+#fifthLink:hover #linkTofifth{
+   display: flex;
+   justify-content: space-around;
+}
+
+#linkTosixth{
+  display: none;
+}
+
+#sixthLink:hover #linkTosixth{
+   display: flex;
+   justify-content: space-around;
+}
+
+#linkToseventh{
+  display: none;
+}
+
+#seventhLink:hover #linkToseventh{
+  display: flex;
+   justify-content: space-around;
+}
+
+#linkToeight{
+  display: none;
+}
+
+#eightLink:hover #linkToeight{
+  display: flex;
+  justify-content: space-around;
+}
+
+#linkTonine{
+  display: none;
+}
+
+#ninthLink:hover #linkTonine{
+   display: flex;
+   flex-direction: column;
+}
+
+.linkHolder{
+  display: flex;
+  flex-direction: column;
+}
+
 
 .navbarMenu .listOfproducts li a {
   position: relative;
@@ -57,10 +166,18 @@ body {
 
 .navbarMenu .listOfproducts li a:hover {
   color: var(--brandcolor);
+  
 }
 
 .navbarMenu li a:hover::after {
   width: 100%;
+}
+
+
+
+
+body:has(.listOfproducts li:hover) .overlay {
+  display: block;
 }
 
 .navbarMenu .listOfproducts {
@@ -597,9 +714,7 @@ main {
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
-   box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.12),
-    inset 0 0 8px rgba(0, 0, 0, 0.08);
+  
 
 }
 
@@ -772,6 +887,16 @@ footer{
 
 .lastOffooter i{
   color: #ff0000;
+}
+
+.overlay{
+  width: 100%;
+  height: 100vh;
+ background-color: rgba(0, 0, 0, 0.45);
+ backdrop-filter: blur(5px);
+  position: fixed;
+  top: 130px;
+  display: none;
 }
 
 @media only screen and (max-width: 567px) {
@@ -1036,6 +1161,10 @@ footer{
   .newHolder {
     border: none;
     height: auto;
+  }.overlay{
+    display: none !important;
+  }.megaMenu{
+    display: none !important;
   }
 }
 /*Tablets*/
