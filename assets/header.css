@@ -1,0 +1,334 @@
+
+
+.navbar {
+  position: relative;
+
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbarMenu {
+  width: 100%;
+  border-bottom: 1px solid var(--borders);
+  position: relative;
+}
+
+.megaMenu{
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  z-index: 200;
+  margin: 0 auto;
+  border-radius: 0 0 5px 5px;
+}
+
+.megaMenuSupport{
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 20%;
+  width: 15%;
+  height: auto;
+  background-color: #fff;
+  z-index: 200;
+  margin: 0 auto;
+  border-radius: 0 0 5px 5px;
+}
+
+.megaMenuSupport a{
+  margin-top: 25px;
+  margin-right: 10px;
+}
+
+#linkTofirst{
+      display: none;
+
+
+}
+ 
+#firstLink:hover #linkTofirst{
+   display: flex;
+   justify-content: space-around;
+}
+
+#linkTosecond{
+      display: none;
+
+
+}
+ 
+#secondLink:hover #linkTosecond{
+   display: flex;
+   justify-content: space-around;
+}
+
+#linkTothird{
+  display: none;
+}
+
+#thirdLink:hover #linkTothird{
+  display: flex;
+     justify-content: space-around;
+
+}
+
+#linkTofourth{
+  display: none;
+}
+
+#fourthLink:hover #linkTofourth{
+  display: flex;
+     justify-content: space-around;
+
+}
+
+#linkTofifth{
+      display: none;
+
+
+}
+ 
+#fifthLink:hover #linkTofifth{
+   display: flex;
+   justify-content: space-around;
+}
+
+#linkTosixth{
+  display: none;
+}
+
+#sixthLink:hover #linkTosixth{
+   display: flex;
+   justify-content: space-around;
+}
+
+#linkToseventh{
+  display: none;
+}
+
+#seventhLink:hover #linkToseventh{
+  display: flex;
+   justify-content: space-around;
+}
+
+#linkToeight{
+  display: none;
+}
+
+#eightLink:hover #linkToeight{
+  display: flex;
+  justify-content: space-around;
+}
+
+#linkTonine{
+  display: none;
+}
+
+#ninthLink:hover #linkTonine{
+   display: flex;
+   flex-direction: column;
+}
+
+.linkHolder{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.navbarMenu .listOfproducts li a {
+  position: relative;
+}
+
+.navbarMenu .listOfproducts li a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: var(--brandcolor);
+  transition: 300ms ease;
+}
+
+.navbarMenu .listOfproducts li a:hover {
+  color: var(--brandcolor);
+  
+}
+
+.navbarMenu li a:hover::after {
+  width: 100%;
+}
+
+
+
+
+body:has(.listOfproducts li:hover) .overlay {
+  display: block;
+}
+
+.navbarMenu .listOfproducts {
+  max-width: 55%;
+  padding-right: 50px;
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  white-space: nowrap;
+}
+
+.navbarMenu .listOfproducts li {
+  display: flex;
+  gap: 10px;
+}
+
+.navbarMenu .listOfproducts li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.navbarMenu .listOfproducts li img {
+  width: 40%;
+  height: 70%;
+  vertical-align: middle;
+}
+
+.brandName {
+  width: 15%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.inputHolder .fa-magnifying-glass {
+  position: absolute;
+  top: 40px;
+  right: 16%;
+  color: var(--borders);
+}
+
+.brandName p {
+  font-size: 30px;
+  color: var(--brandcolor);
+}
+
+.inputHolder {
+  width: 50%;
+}
+
+.inputHolder input {
+  width: 85%;
+  height: 35px;
+  border-radius: 5px;
+  padding-right: 35px;
+  box-shadow: 1px 1px 5px #000;
+  border: none;
+  font-family: Yekan;
+}
+
+.buttonsAndbasket {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  padding-left: 35px;
+}
+
+.buttonsAndbasket button {
+  border: 1px solid var(--borders);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-family: Yekan;
+}
+
+
+
+/*Phone and Tablet*/
+@media only screen and (max-width: 767px) {
+  .brandName {
+    width: 50%;
+    order: 1;
+  }
+
+  .buttonsAndbasket {
+    width: 50%;
+    height: auto;
+    order: 2;
+  }
+
+  .inputHolder {
+    width: 100%;
+
+    order: 3;
+  }
+
+  .inputHolder input {
+    width: 90%;
+    display: block;
+    margin: 50px auto;
+  }
+
+  .inputHolder .fa-magnifying-glass {
+    top: 62%;
+    right: 7%;
+  }
+
+  .navbarMenu {
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .navbarMenu .listOfproducts {
+    width: max-content;
+    max-width: none;
+    padding-right: 0;
+    gap: 10px;
+  }
+  .navbarMenu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navbarMenu .listOfproducts li img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .navbar {
+    height: auto;
+    min-height: 100px;
+  }.overlay{
+    display: none !important;
+  }.megaMenu,.megaMenuSupport{
+    display: none !important;
+  }
+}
+
+/*Tablets*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbarMenu .listOfproducts {
+    max-width: 75%;
+  }
+
+  .navbarMenu .listOfproducts li img {
+    width: 35%;
+  }
+
+  .navbarMenu .listOfproducts {
+    gap: 25px;
+  }.megaMenuSupport,.megaMenu{
+     display: none !important;
+  }.overlay{
+    display: none !important;
+  }
+}

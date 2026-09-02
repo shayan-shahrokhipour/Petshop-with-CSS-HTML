@@ -1,0 +1,85 @@
+
+:root {
+ --backgroundFooter: #d8f3d3;
+ --brandcolor:#95d5b2;
+  --backgrounds: #6c3b70;
+  --skyBlue: #7dd3fc;
+  --borders: rgb(211, 209, 209);
+  --trophies: #ffd700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Yekan;
+  src: url(../assets/B_Yekan/Yekan.ttf);
+}
+
+body {
+    height: 100vh;
+    
+  direction: rtl;
+  font-family: Yekan;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+
+main {
+  width: 100%;
+}
+body:has(.listOfproducts li:hover) .overlay {
+  display: block;
+}
+.overlay{
+  width: 100%;
+  height: 100vh;
+ background-color: rgba(0, 0, 0, 0.45);
+ backdrop-filter: blur(5px);
+  position: fixed;
+  top: 130px;
+  display: none;
+}
+
+.breadcrumb {
+    padding: 20px;
+}
+
+.breadcrumb span a{
+    text-decoration: none;
+    color: var(--skyBlue);
+}
+
+.priceandcustomefilter{
+width: 100%;
+height: auto;
+}
+
+.priceandcustomefilter aside{
+    width: 20%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid var(--borders);
+    padding-right: 15px;
+}
+
+.priceandcustomefilter aside p a{
+    text-decoration: none;
+    color: #4B5563;
+    font-size: 15px;
+    transition: ease 200ms;
+}
+
+.priceandcustomefilter aside p a:hover{
+   color: var(--skyBlue);
+}
+
+@media only screen and (max-width:767px){
+    .breadcrumb{
+        text-align: center;
+    }
+}
