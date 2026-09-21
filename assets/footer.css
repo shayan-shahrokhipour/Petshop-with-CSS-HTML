@@ -1,3 +1,8 @@
+:root{
+ --backgroundFooter: #d8f3d3;
+
+}
+
 footer{
   width: 99%;
   height: auto;
