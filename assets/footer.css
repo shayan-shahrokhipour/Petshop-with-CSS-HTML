@@ -139,6 +139,7 @@ footer{
     margin-top: 10px;
   }footer{
     width: 90%;
+    height: auto;
   }.samestyleColumn{
     width: 90%;
   }.sixthColumn iframe{
