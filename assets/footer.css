@@ -141,6 +141,7 @@ footer{
     width: 90%;
   }.samestyleColumn{
     width: 90%;
+    gap: 10px;
   }.sixthColumn iframe{
     width: 90%;
   }.sixthColumn{
