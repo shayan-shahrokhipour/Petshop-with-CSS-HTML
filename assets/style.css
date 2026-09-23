@@ -571,6 +571,8 @@ main {
   text-decoration: none;
 }
 
+
+
 @media only screen and (max-width: 567px) {
   .categoryPics {
     width: 30%;

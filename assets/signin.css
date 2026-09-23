@@ -1,0 +1,61 @@
+:root{
+    --brandcolor:#95d5b2;
+      --borders: rgb(211, 209, 209);
+      --headers:#16a34a;
+}
+.signIn{
+ width: 35%;
+ height: 500px;
+border: 1px solid var(--borders);
+ display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+ margin: 15% auto;
+ border-radius: 5px;
+}
+
+.signIn input{
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    
+}
+
+.signIn input:focus{
+    border:1px solid #95d5b2;
+}
+
+.signIn button{
+    width: 90%;
+    height: 40px;
+    background-color: var(--headers);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.signIn a{
+    text-decoration: none;
+    color: var(--headers);
+}
+
+.createSignin{
+    color: var(--headers);
+}
+
+.signIn .brand{
+    color: var(--brandcolor);
+}
+
+.signIn input{
+    padding-right: 5px;
+}
+
+@media only screen and (max-width:767px){
+    .signIn{
+    width: 90%;
+    }
+}

@@ -249,9 +249,12 @@ body:has(.listOfproducts li:hover) .overlay {
   padding: 10px;
   cursor: pointer;
   font-family: Yekan;
+  transition: all 200ms;
 }
 
-
+.buttonsAndbasket button:hover{
+  border: 1px solid #7C3AED;
+}
 
 /*Phone and Tablet*/
 @media only screen and (max-width: 767px) {
