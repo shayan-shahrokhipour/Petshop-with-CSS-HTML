@@ -576,17 +576,15 @@ main {
     width: 30%;
   }
   .secondImg {
-    position: static;
-    width: 45%;
+    width: 90%;
     height: 250px;
-    animation: none;
     margin: 10px auto;
   }
   .heroHolder {
     display: flex;
   }
   .heroHolder .firstImg {
-    width: 45%;
+    width: 90%;
     height: 250px;
     animation: none;
   }
