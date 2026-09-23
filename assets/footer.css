@@ -119,7 +119,7 @@ footer{
     width: 90%;
     flex-direction: column;
     text-align: center;
-    gap: 10px;
+    gap: 25px;
   }.firstrowfooter h3{
     width: 100%;
   }.firstrowfooter button{
