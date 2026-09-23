@@ -133,6 +133,7 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 25px;
   }.second-line{
     display: none;
   }.first-line{
@@ -141,7 +142,6 @@ footer{
     width: 90%;
   }.samestyleColumn{
     width: 90%;
-    gap: 50px;
   }.sixthColumn iframe{
     width: 90%;
   }.sixthColumn{
