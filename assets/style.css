@@ -567,6 +567,10 @@ main {
   display: none;
 }
 
+.brandName a{
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 567px) {
   .categoryPics {
     width: 30%;
@@ -577,7 +581,6 @@ main {
     height: 250px;
     animation: none;
     margin: 10px auto;
-    object-fit: cover;
   }
   .heroHolder {
     display: flex;
@@ -586,7 +589,6 @@ main {
     width: 45%;
     height: 250px;
     animation: none;
-    object-fit: cover;
   }
 
   .newHolder {

@@ -179,13 +179,17 @@ position: relative;
   box-shadow: none;
 }
 
+@media screen and (max-width:568px){
+
+}
+
 @media only screen and (max-width:767px){
     .breadcrumb{
         text-align: center;
     }.priceandcustomefilter aside{
       display: none;
     }.productsRow{
-      width: 99%;
+      width: 32%;
       height: auto;
     }.products{
       width: 90%;
@@ -206,6 +210,11 @@ position: relative;
 }.productsRow span{
   display: block;
   text-align: center;
+}.expired{
+  width: auto;
+  height: auto;
+  top: 50px;
+  font-size: 11px;
 }
 }
 
